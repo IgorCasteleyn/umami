@@ -6,12 +6,12 @@ import { Logo } from '@/components/svg';
 export function Header() {
   return (
     <Row as="header" justifyContent="space-between" alignItems="center" paddingY="3">
-      <a href="https://umami.is" target="_blank" rel="noopener">
+      <a href="/" target="_blank" rel="noopener">
         <Row alignItems="center" gap>
           <Icon>
             <Logo />
           </Icon>
-          <Text weight="bold">umami</Text>
+          <Text weight="bold">prof-IT-flow</Text>
         </Row>
       </a>
       <Row alignItems="center" gap>

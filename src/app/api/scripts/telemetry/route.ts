@@ -4,7 +4,8 @@ export async function GET() {
   if (
     process.env.NODE_ENV !== 'production' ||
     process.env.DISABLE_TELEMETRY ||
-    process.env.PRIVATE_MODE
+    process.env.PRIVATE_MODE ||
+    !TELEMETRY_PIXEL
   ) {
     return new Response('/* telemetry disabled */', {
       headers: {
