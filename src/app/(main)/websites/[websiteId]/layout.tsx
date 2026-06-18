@@ -15,7 +15,7 @@ export default async function ({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | prof-IT-flow',
-    default: 'Websites | prof-IT-flow',
+    template: '%s | Nomo IT',
+    default: 'Websites | Nomo IT',
   },
 };

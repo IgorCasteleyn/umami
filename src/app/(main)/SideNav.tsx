@@ -52,7 +52,7 @@ export function SideNav(props: SidebarProps) {
     <Sidebar {...props} isCollapsed={isCollapsed || hasNav} backgroundColor>
       <SidebarSection onClick={() => setIsCollapsed(false)}>
         <SidebarHeader
-          label="prof-IT-flow"
+          label="Nomo IT"
           icon={isCollapsed && !hasNav ? <PanelLeft /> : <Logo />}
           style={{ maxHeight: 40 }}
         >

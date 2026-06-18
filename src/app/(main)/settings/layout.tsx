@@ -11,7 +11,7 @@ export default function ({ children }) {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Settings | prof-IT-flow',
-    default: 'Settings | prof-IT-flow',
+    template: '%s | Settings | Nomo IT',
+    default: 'Settings | Nomo IT',
   },
 };

@@ -11,7 +11,7 @@ export function Header() {
           <Icon>
             <Logo />
           </Icon>
-          <Text weight="bold">prof-IT-flow</Text>
+          <Text weight="bold">Nomo IT</Text>
         </Row>
       </a>
       <Row alignItems="center" gap>
