@@ -17,6 +17,7 @@ export { default as Lightbulb } from './Lightbulb';
 export { default as Lightning } from './Lightning';
 export { default as Location } from './Location';
 export { default as Lock } from './Lock';
+export { default as BrandLogo } from './BrandLogo';
 export { default as Logo } from './Logo';
 export { default as LogoWhite } from './LogoWhite';
 export { default as Magnet } from './Magnet';

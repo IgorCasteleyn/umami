@@ -1,14 +1,28 @@
 :root {
-  --zen-font-family: var(--font-inter), sans-serif;
+  --zen-font-family: var(--font-work-sans), sans-serif;
+  --zen-font-family-heading: var(--font-montserrat), sans-serif;
 }
 
 /* Preserve the brand accent when Zen applies its light or dark theme tokens. */
 :root,
-[data-theme="light"],
-[data-theme="dark"],
-.dark {
-  --zen-primary: oklch(62.3% 0.214 259.815);
-  --zen-primary-fg: oklch(98.5% 0 0);
+[data-theme='light'],
+[data-theme='dark'] {
+  --zen-primary: #ff5722;
+  --zen-primary-fg: #ffffff;
+}
+
+/* Nomo light surfaces — only in light theme so dark mode keeps dark surfaces + white logo */
+:root:not([data-theme='dark']),
+[data-theme='light'] {
+  --zen-fg: #0b0b0c;
+  --zen-surface: #ffffff;
+  --zen-surface-raised: #f3f3f3;
+}
+
+[data-theme='dark'] {
+  --zen-fg: #f3f3f3;
+  --zen-surface: #0b0b0c;
+  --zen-surface-raised: #000000;
 }
 
 /* Zen's rem-based typography and spacing assume the browser's default root size. */
@@ -27,6 +41,28 @@ body {
 
 body {
   font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--zen-font-family-heading), sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+/* Nomo IT brand logo: Logo_licht on light surfaces, Logo_zwart on dark */
+.nomo-brand-logo .nomo-logo-dark {
+  display: none !important;
+}
+
+:root[data-theme='dark'] .nomo-brand-logo .nomo-logo-light {
+  display: none !important;
+}
+
+:root[data-theme='dark'] .nomo-brand-logo .nomo-logo-dark {
+  display: block !important;
 }
 
 html[style*="padding-right"] {

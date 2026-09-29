@@ -1,15 +1,15 @@
 'use client';
-import { Icon, Row, Text } from '@umami/react-zen';
+import { Row, Text } from '@umami/react-zen';
 import { useShare } from '@/components/hooks';
-import { Logo } from '@/components/svg';
+import { BrandLogo } from '@/components/svg';
 
 const LOGO_SIZE = { sm: 24, md: 32, lg: 40 };
 const TEXT_SIZE = { sm: 'sm', md: 'base', lg: 'lg' } as const;
 
 export function ShareBranding({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   const share = useShare();
-  const logoDomain = share?.whiteLabel?.domainName || 'https://umami.is';
-  const logoName = share?.whiteLabel?.displayName || 'umami';
+  const logoDomain = share?.whiteLabel?.domainName || 'https://nomoit.com';
+  const logoName = share?.whiteLabel?.displayName || 'Nomo IT';
   const logoImage = share?.whiteLabel?.logoUrl;
   const height = LOGO_SIZE[size];
 
@@ -19,13 +19,13 @@ export function ShareBranding({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
         {logoImage ? (
           <img src={logoImage} alt={logoName} style={{ height }} />
         ) : (
-          <Icon>
-            <Logo />
-          </Icon>
+          <BrandLogo height={height} />
         )}
-        <Text size={TEXT_SIZE[size]} weight="bold">
-          {logoName}
-        </Text>
+        {logoImage && (
+          <Text size={TEXT_SIZE[size]} weight="bold">
+            {logoName}
+          </Text>
+        )}
       </Row>
     </a>
   );
